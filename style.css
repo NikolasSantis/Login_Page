@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 input {
@@ -11,7 +12,8 @@ input {
     margin: 4px 0 16px;
 }
 
-h3 {
+label {
+    font-size: larger;
     margin: 0 0 1vh 0;
 }
 

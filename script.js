@@ -1,3 +1,5 @@
+
+// Variáveis para os botões de 'Entrar' e 'Fechar' a mensagem de erro caso apareça
 const enter = document.getElementById("enter");
 const close_error = document.getElementById("button-error");
 
@@ -9,19 +11,22 @@ const user = {
     passoword: "nick"
 };
 
-const users = JSON.parse(localStorage.getItem('database_users')) ?? [user];
+// Bloco de funções da página 
 
-
+// Irá fazer com que a mensagem de erro apareça
 function setError() {
     let error_message = document.getElementById("error-message");
     error_message.setAttribute('style', 'display: flex');
 }
 
+// Irá 'Fechar' a mensagem de erro 
 function closeError() {
     let error_message = document.getElementById("error-message");
     error_message.removeAttribute('style', 'display: flex');
 }
 
+// Irá fazer a verificação de login, caso contenha dados incorretos, 
+// chamará a função de mensagem de erro 'setError'
 function enterClicked() {
     let trainer_id = document.getElementById("trainer_id");
     let password = document.getElementById("password");
@@ -38,5 +43,8 @@ function enterClicked() {
     }
 }
 
+// Bloco de eventos na página
+
+// Eventos de click, para o botão de 'Enter' e o 'X' da mensagem de erro  
 enter.addEventListener('click', enterClicked);
 close_error.addEventListener('click', closeError);

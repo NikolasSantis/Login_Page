@@ -7,22 +7,26 @@
     <title>Login</title>
 </head>
 <body>
+
+    <!-- Emblema de pokebola  -->
     <img id="pokebola" title="Ícone de Pokebola" src="./images/pokebola-icon.png">
     
+    <!-- Mensagem de erro, caso tenha algum erro pelo usuário  -->
     <div id="error-message"> 
         <div> Incorret Trainer ID or password </div>
         <div id="button-error"> X </div>
     </div>
     
-    <div id="login-container">
-        <h3> Trainer ID: </h3>
+    <!-- Container de formulário de login -->
+    <form id="login-container">
+        <label for="trainer_id"> Trainer ID: </label>
         <input id="trainer_id" type="text" name="trainer_id" title="Espaço para preencher seu Id">
-        <h3> Password: </h3>
+        <label for="password"> Password: </label>
         <input id="password" type="password" name="id"  title="Espaço para preencher sua senha"> 
         <button id="enter" type="button" title="Botão de entrar"> Entrar </button>
 
-        <div id="create-account"> <h4> New Trainer? <u id="account-button"> Create a account </u> </h4> </div>
-    </div>
+        <span id="create-account"> <h4> New Trainer? <u id="account-button"> Create a account </u> </h4> </span>
+    </form>
 
     <script src="script.js"></script>
     
